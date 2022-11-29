@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle House Escape Rooms / Coming Soon</title>
 </head>
-<body class="bg-darkest min-h-screen flex flex-col justify-center items-center">
+<body class="bg-obsidian min-h-screen flex flex-col justify-center items-center">
 <section class="p-4 w-full max-w-7xl">
     <div>
-        <div class="">
-            <img class="w-48 mx-auto my-4" src="Puzzle_House_Escape_Rooms_Standalone.svg"/>
+        <div class=>
+            <img class="w-48 mx-auto my-4 fill-white" src="Puzzle_House_Escape_Rooms_Standalone.svg"/>
             <div>
                 <h1 class="font-kiona-bold leading-10 tracking-widest text-6xl text-white text-center">Puzzle House</h1>
-                <h2 class="font-kiona-bold font-thin tracking-widest text-blood text-4xl text-center">Escape Rooms</h2>
+                <h2 class="font-kiona-bold font-thin tracking-widest text-blood-400 text-4xl text-center">Escape Rooms</h2>
             </div>
         </div>
     </div>
 
     <div class="my-8 py-4">
-        <h2 class="font-kiona-light text-white text-2xl my-4 px-4 text-center">Coming Soon to <span
-                class="text-blood font-kiona-italic">Carlisle, Pennsylvania</span></h2>
+        <h2 class="font-kiona-light text-white text-xl my-4 px-4 text-center">Coming Soon to <span
+                class="text-blood-400 text-2xl font-kiona-semibolditalic bg-slate-600 px-1 pb-1 border-slate-300">Carlisle, Pennsylvania</span></h2>
 
         <div class="flex justify-center">
             <div class="shadow-lg w-full max-w-4xl">
@@ -34,7 +34,8 @@
     <div class="mt-8 flex flex-col items-center align-center">
         <p class="text-white text-center font-kiona-light text-xl">Subscribe to be notified when we're open</p>
 
-        <form class="my-4 flex flex-col md:flex-row gap-2 justify-center items-center w-full" name="notifications" netlify>
+        <form class="my-4 flex flex-col md:flex-row gap-2 justify-center items-center w-full" name="notifications"
+              netlify>
             <div class="w-full max-w-2xl">
                 <label for="email" class="sr-only">Email</label>
                 <div class="relative mt-1 rounded-md shadow-sm">
@@ -51,7 +52,7 @@
                 </div>
             </div>
 
-            <button class="self-end py-3 px-2 rounded-md bg-slate hover:bg-slate-600 text-white cursor-pointer mt-1"
+            <button class="self-end py-3 px-2 rounded-md bg-blood hover:bg-blood-600 text-white cursor-pointer mt-1"
                     type="submit">Notify Me
             </button>
         </form>
@@ -81,7 +82,7 @@
                 </svg>
             </a>
 
-            <a href="mailto:Puzzlehouseescape@gmail.com" class="text-slate-200 hover:text-slate-400">
+            <a href="mailto:Puzzlehouseescape@gmail.com" class="text-slate-300 hover:text-slate-400">
                 <span class="sr-only">Email</span>
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                      aria-hidden="true">
@@ -91,7 +92,7 @@
             </a>
         </div>
         <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-base text-slate-200">&copy; 2022 Puzzle House Escape Rooms, LLC. All rights
+            <p class="text-center text-base text-slate-300">&copy; 2022 Puzzle House Escape Rooms, LLC. All rights
                 reserved.</p>
         </div>
     </div>
@@ -105,8 +106,32 @@
     theme: {
       extend: {
         colors: {
-          blood: 'rgb(152, 6, 9)',
-          darkest: 'rgb(20,20,20)',
+          'blood': {
+            DEFAULT: '#640014',
+            '50': '#D7002B',
+            '100': '#CA0028',
+            '200': '#B10023',
+            '300': '#97001E',
+            '400': '#7E0019',
+            '500': '#640014',
+            '600': '#4B000F',
+            '700': '#31000A',
+            '800': '#180005',
+            '900': '#000000'
+          },
+          'obsidian': {
+            DEFAULT: '#141414',
+            '50': '#4D4D4D',
+            '100': '#474747',
+            '200': '#3A3A3A',
+            '300': '#2E2E2E',
+            '400': '#212121',
+            '500': '#141414',
+            '600': '#070707',
+            '700': '#000000',
+            '800': '#000000',
+            '900': '#000000'
+          },
           'slate': {
             DEFAULT: '#202020',
             '50': '#595959',
@@ -123,8 +148,12 @@
         },
         fontFamily: {
           'kiona-bold': ['NetKionaBold', 'serif'],
+          'kiona-semibold': ['NetKionaSemiBold', 'serif'],
+          'kiona-semibolditalic': ['NetKionaSemiBoldItalic', 'serif'],
+          'kiona-bolditalic': ['NetKionaBoldItalic', 'serif'],
           'kiona-light': ['NetKionaLight', 'serif'],
           'kiona-italic': ['NetKionaItalic', 'serif'],
+          'kiona': ['NetKiona', 'serif'],
         }
       }
     }
@@ -136,18 +165,44 @@
 
     @font-face {
         font-family: NetKionaBold;
-        src: url(Net-Kiona-Bold.ttf);
+        src: url(assets/fonts/Kiona-Bold.ttf);
     }
 
     @font-face {
         font-family: NetKionaLight;
-        src: url(Net-Kiona-Light.ttf);
+        src: url(assets/fonts/Kiona-Light.ttf);
+    }
+
+    @font-face {
+        font-family: NetKionaLightItalic;
+        src: url(assets/fonts/Kiona-LightItallic.ttf);
+    }
+
+    @font-face {
+        font-family: NetKionaBoldItalic;
+        src: url(assets/fonts/Kiona-BoldItallic.ttf);
+    }
+
+    @font-face {
+        font-family: NetKiona;
+        src: url(assets/fonts/Kiona-Regular.ttf);
     }
 
     @font-face {
         font-family: NetKionaItalic;
-        src: url(Net-Kiona-Italic.ttf);
+        src: url(assets/fonts/Kiona-Itallic.ttf);
     }
+
+    @font-face {
+        font-family: NetKionaSemiBold;
+        src: url(assets/fonts/Kiona-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: NetKionaSemiBoldItalic;
+        src: url(assets/fonts/Kiona-SemiBoldItallic.ttf);
+    }
+
 
     * {
         margin: 0;
